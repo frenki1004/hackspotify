@@ -28,4 +28,4 @@ else
 fi
 
 sudo curl -o /usr/bin/hackspotify https://raw.githubusercontent.com/frenki1004/hackspotify/main/binary.sh 
-sudo chmod +x /usr/bin/hackspotify.sh
+sudo chmod +x /usr/bin/hackspotify
