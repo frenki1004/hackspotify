@@ -175,7 +175,7 @@ call_api(){
     link="https://www.youtube.com/$type?list=$link_id"
     link_thumbnail=$(cat $path/"$userInput"/data.json | jq -r .snippet.thumbnails.high.url)
 }
-downlaoding(){
+downloading(){
     if [[ "$exists" = "false" || "$flag_u" = "true" ]];then
         echo "tu sam skidam "
         if ( $flag_i );then
