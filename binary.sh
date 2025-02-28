@@ -141,7 +141,16 @@ read_arguments() {
     if [ -z "$userInput" ] && [ "$#" -gt 0 ]; then
         userInput="$*"  
     fi
-
+    echo "user input je $userInput"
+    echo "$userInput"
+    if ( "$userInput" = "update" );then
+        flag_update=true
+        echo "UPDATING..."
+        read x
+    else
+        echo "not updating"
+        read x
+    fi
     echo "Captured user input: $userInput"
     userInputProcessed=$(echo "$userInput" | tr '[:upper:]' '[:lower:]')
 #    userInputProcessed=$(echo "$userInputProcessed" | tr ' ' '\n' | sort | tr '\n' ' ' | sed 's/ $//')
