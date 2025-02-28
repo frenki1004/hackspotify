@@ -27,5 +27,5 @@ else
     sudo apt install yt-dlp                         # Install yt-dlp
 fi
 
-sudo curl -o /usr/bin/hackspotify.sh https://raw.githubusercontent.com/frenki1004/hackspotify/main/binary.sh 
+sudo curl -o /usr/bin/hackspotify https://raw.githubusercontent.com/frenki1004/hackspotify/main/binary.sh 
 sudo chmod +x /usr/bin/hackspotify.sh
