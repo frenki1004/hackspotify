@@ -189,10 +189,10 @@ downloading(){
     if [[ "$exists" = "false" || "$flag_u" = "true" ]];then
         echo "tu sam skidam "
         if ( $flag_i );then
-            yt-dlp --lazy-playlist -wxqP $path/"$userInput"/songs $link & 
+            yt-dlp --cookies-from-browser firefox --lazy-playlist -wxqP $path/"$userInput"/songs $link & 
         else
             echo "downloading wait a min"
-            yt-dlp --lazy-playlist -wxP $path/"$userInput"/songs $link & 
+            yt-dlp --cookies-from-browser firefox --lazy-playlist -wxP $path/"$userInput"/songs $link & 
             yt_dlp_pid=$!
             echo "yt_dlp pid je $yt_dlp_pid"
             wait $yt_dlp_pid
