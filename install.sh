@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt update
 
-commands_needed="figlet mpv catimg"
+commands_needed="figlet toilet mpv catimg"
 for command in $commands_needed
 do
     echo "current command is $command"
