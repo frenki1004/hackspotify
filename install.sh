@@ -1,5 +1,5 @@
 #!/bin/bash
-#sudo apt update
+sudo apt update
 
 commands_needed="figlet mpv catimg"
 for command in $commands_needed
@@ -27,5 +27,8 @@ else
     sudo apt install yt-dlp                         # Install yt-dlp
 fi
 
+if [ -e /usr/bin/hackspotify ];then
+    sudo rm -f /usr/bin/hackspotify
+fi
 sudo curl -so /usr/bin/hackspotify https://raw.githubusercontent.com/frenki1004/hackspotify/main/binary.sh 
 sudo chmod +x /usr/bin/hackspotify

@@ -28,6 +28,7 @@ path=$path_home
 
 
 OPTSTRING=":tidwuSo"
+flag_update=false
 flag_t=false
 flag_i=false
 flag_d=true
@@ -48,6 +49,10 @@ type="playlist"
 
 exists=false
 
+
+update(){
+    sudo curl -so /usr/bin/hackspotify https://raw.githubusercontent.com/frenki1004/hackspotify/main/install.sh 
+}
 check_if_everything_all_right () {
     if [ ! -d $HOME/Music ]
     then 
@@ -141,15 +146,11 @@ read_arguments() {
     if [ -z "$userInput" ] && [ "$#" -gt 0 ]; then
         userInput="$*"  
     fi
-    echo "user input je $userInput"
-    echo "$userInput"
-    if ( "$userInput" = "update" );then
+    if [[ "$userInput" == "update" ]] ;then
         flag_update=true
-        echo "UPDATING..."
-        read x
-    else
-        echo "not updating"
-        read x
+        echo "updating..."
+        update
+        exit 0
     fi
     echo "Captured user input: $userInput"
     userInputProcessed=$(echo "$userInput" | tr '[:upper:]' '[:lower:]')

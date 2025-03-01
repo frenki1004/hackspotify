@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "this is in test.sh"
+userInput=$*
+echo "User input je $userInput"
 
-touch ~/'nonchalant coexistence of mine'
 
