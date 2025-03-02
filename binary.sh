@@ -88,7 +88,7 @@ check_if_everything_all_right () {
                 read api_key
                 echo "api key is $api_key"
                 echo $api_key>$path_home/.secrets.txt
-
+                exit 0
                 ;;
             ?) echo "you said no, implement it on your own"
                 exit 1
@@ -180,6 +180,10 @@ call_api(){
     if ( ! $exists -o $flag_u );then
         echo "ne postosji pozovi api"
         echo $(curl -s "$link_default&q=$userInputProcessed&type=$type&key=$api_key" | jq .items[]) >$path/"$userInput"/data.json
+    fi
+    if [[ "$(cat ~/Music/hackspotify/"$userInput"/data.json)"="" ]];then
+        echo "API key doesnt work or you didn't update, run all the same but with -u as in update"
+        exit 1
     fi
     link_id=$(cat $path/"$userInput"/data.json | jq -r .id.playlistId)
     link="https://www.youtube.com/$type?list=$link_id"
