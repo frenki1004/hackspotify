@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo apt update
 
 commands_needed="figlet toilet mpv catimg"
 for command in $commands_needed
@@ -32,3 +31,13 @@ if [ -e /usr/bin/hackspotify ];then
 fi
 sudo curl -so /usr/bin/hackspotify https://raw.githubusercontent.com/frenki1004/hackspotify/main/binary.sh 
 sudo chmod +x /usr/bin/hackspotify
+echo "
+_hackspotify_autocomplete() {
+    local cur
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    COMPREPLY=( $(compgen -W "$(ls ~/Music/hackspotify)" -- "$cur") )
+    return 0
+}
+">>~/.bash_completion
+source ~/.bashrc
