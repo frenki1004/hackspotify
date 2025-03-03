@@ -13,9 +13,14 @@ TUTOIRAL
 
 before installing, checkout the code
 install simply with: 
+
 sudo apt update
+
 sudo curl -s https://raw.githubusercontent.com/frenki1004/hackspotify/main/install.sh | bash
+
+
 after that what is recommended that you put your own youtube api key in the $HOME/Music/hackspotify/.secrets like this
+
 nano $HOME/Music/hackspotify/.secrets
 
 paste your api key here without any spaces or backspaces !!!!! [ctrl+shift+v]
@@ -24,11 +29,18 @@ now everything should work like this
 
 just run it anytime with
 hackspotify "whatever you want to listen to"
+
 preferably use this format -> 
 hackspotify [-flags] [ARTIST NAME] [ALBUM NAME] album
+
+
 for example:
+
 hackspotify -iS kanye west graduation album
+
+
 flags ive implemented so far are -tiduSo
+
 -t temporary, it saves your download music to your /tmp files which are deleted regularly, use this when you want to just listen to something without downloading it
 
 -i immediately play, without waiting for it to download
