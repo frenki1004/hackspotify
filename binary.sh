@@ -177,11 +177,12 @@ create_environment(){
 call_api(){
     link_default="https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1"
     api_key=$(cat $path_home/.secrets.txt)
-    if ( ! $exists -o $flag_u );then
+    if [[ "$exists" = false || "$flag_u" = "true" ]];then
         echo "ne postosji pozovi api"
         echo $(curl -s "$link_default&q=$userInputProcessed&type=$type&key=$api_key" | jq .items[]) >$path/"$userInput"/data.json
     fi
-    if [[ "$(cat ~/Music/hackspotify/"$userInput"/data.json)"="" ]];then
+    cat ~/Music/hackspotify/"$userInput"/data.json
+    if [ -z ~/Music/hackspotify/"$userInput"/data.json ];then
         echo "API key doesnt work or you didn't update, run all the same but with -u as in update"
         exit 1
     fi
