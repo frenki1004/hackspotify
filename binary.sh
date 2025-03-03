@@ -51,7 +51,8 @@ exists=false
 
 
 update(){
-    sudo curl -so /usr/bin/hackspotify https://raw.githubusercontent.com/frenki1004/hackspotify/main/install.sh 
+    sudo curl -s https://raw.githubusercontent.com/frenki1004/hackspotify/main/install.sh | bash
+
 }
 check_if_everything_all_right () {
     if [ ! -d $HOME/Music ]
