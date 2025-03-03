@@ -53,5 +53,12 @@ flags ive implemented so far are -tiduSo
 
 -o original order as in the youtube playlist
 
+Ive also implemented the autofill option but it only works correctly if youre in its hackspotify folder
+so prefereably before every command run just do 
+
+cd ~/Music/hackspotify
+
+then run command
+
 if you forget what everything does just run cat /usr/bin/hackspotify | head -n 25
 ENJOY!!
