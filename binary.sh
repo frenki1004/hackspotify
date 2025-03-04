@@ -25,6 +25,7 @@
 name="hackspotify"
 path_home=$HOME/Music/$name
 path=$path_home
+commands_needed="figlet toilet mpv catimg yt-dlp"
 
 
 OPTSTRING=":tidwuSo"
@@ -55,6 +56,15 @@ update(){
 
 }
 check_if_everything_all_right () {
+    for command in $commands_needed
+    do
+        if [ ! -e /usr/bin/$command ]
+        then
+            echo "you are missing $command...Try downloading it"
+            exit 1
+        fi
+    done
+    
     if [ ! -d $HOME/Music ]
     then 
         read -n1 -p "Music folder unavailable, would you like to create one? (y/n)"  response

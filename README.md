@@ -7,7 +7,12 @@ I have done this in like a couple of days and its super fun and useful for me so
 Im mostly depending on a powerful tool called yt-dlp on linux which downloads any video from the internet with loads of available options, hope you enjoy it here are some pictures
 
 
-
+requirements:
+figlet 
+toilet
+catimg
+mpv
+and yt-dlp: look here https://github.com/yt-dlp/yt-dlp/wiki/Installation
 
 TUTOIRAL
 
@@ -61,4 +66,11 @@ cd ~/Music/hackspotify
 then run command
 
 if you forget what everything does just run cat /usr/bin/hackspotify | head -n 25
+
+next song command is simply ctrl+c 
+and exit everything double tap ctrl+c
+
 ENJOY!!
+if you havent used it in a long while try updating it with 
+
+hackspotify update
