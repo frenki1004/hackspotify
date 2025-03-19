@@ -74,7 +74,7 @@ check_if_everything_all_right () {
                 mkdir $HOME/Music
                 ;;
             ?) echo "you said no :("
-                exit 1
+                exit 2
                 ;;
         esac
     fi
@@ -97,12 +97,12 @@ check_if_everything_all_right () {
 
                 echo "input your api key> "
                 read api_key
-                echo "api key is $api_key"
+                #echo "api key is $api_key"
                 echo $api_key>$path_home/.secrets.txt
                 exit 0
                 ;;
             ?) echo "you said no, implement it on your own"
-                exit 1
+                exit 3
                 ;;
         esac
     fi
@@ -147,7 +147,7 @@ read_arguments() {
                 ;;
             ?)
                 echo "Unknown option -${OPTARG}"
-                exit 1   
+                exit 4  
                 ;;
         esac
     done
@@ -195,7 +195,7 @@ call_api(){
     cat ~/Music/hackspotify/"$userInput"/data.json
     if [ -z ~/Music/hackspotify/"$userInput"/data.json ];then
         echo "API key doesnt work or you didn't update, run all the same but with -u as in update"
-        exit 1
+        exit 5
     fi
     link_id=$(cat $path/"$userInput"/data.json | jq -r .id.playlistId)
     link="https://www.youtube.com/$type?list=$link_id"
@@ -276,7 +276,7 @@ echo "exists: $exists"
 
 if [ -z "$link_id" ]; then
     echo "API key doesn't work or returned no results."
-    exit 3
+    exit 6
 fi
 #echo "exists je $exists"
 #echo "flag u je $flag_u" 
