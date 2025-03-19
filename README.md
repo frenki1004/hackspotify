@@ -1,76 +1,127 @@
-# hackspotify
-INTRO
+# 🎧 hackspotify
 
-Hello and welcome to my first opensource project on github called hackspotify, why? Because it sounds super cool
-WORKS ONLY ON UBUNTU !! (for now...)
-I have done this in like a couple of days and its super fun and useful for me so i decided why not publish it on github, so here we are.
-Im mostly depending on a powerful tool called yt-dlp on linux which downloads any video from the internet with loads of available options, hope you enjoy it here are some pictures
+Welcome to **hackspotify** – my first open-source project on GitHub!  
+Why the name? Because it sounds super cool 😎
 
+> ⚠️ **Works ONLY on Ubuntu** (for now...)
 
-requirements:
-figlet 
-toilet
-catimg
-mpv
-and yt-dlp: look here https://github.com/yt-dlp/yt-dlp/wiki/Installation
+Built in just a few days, this tool is a fun and useful way to search, download, and play music via **YouTube** using the amazing power of `yt-dlp`.
 
-TUTOIRAL
+---
 
-before installing, checkout the code
-install simply with: 
+## 🧰 Requirements
 
+Make sure you have the following installed:
+
+- `figlet`
+- `toilet`
+- `catimg`
+- `mpv`
+- `yt-dlp` → [Installation guide](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
+
+---
+
+## 🚀 Installation
+
+First, update your packages and run:
+
+```bash
 sudo apt update
-
 sudo curl -s https://raw.githubusercontent.com/frenki1004/hackspotify/main/install.sh | bash
+```
 
+> 💡 **Tip:** Add your own YouTube API key for better results!
 
-after that what is recommended that you put your own youtube api key in the $HOME/Music/hackspotify/.secrets like this
-
+```bash
 nano $HOME/Music/hackspotify/.secrets
+# Paste your API key (no spaces, no backspaces!)
+```
 
-paste your api key here without any spaces or backspaces !!!!! [ctrl+shift+v]
-now everything should work like this
+---
 
+## 🎵 Usage
 
-just run it anytime with
-hackspotify "whatever you want to listen to"
+Run it from anywhere like this:
 
-preferably use this format -> 
+```bash
+hackspotify "your song/album/artist here"
+```
+
+**Preferred format:**
+
+```bash
 hackspotify [-flags] [ARTIST NAME] [ALBUM NAME] album
+```
 
+### 🔊 Example
 
-for example:
+```bash
+hackspotify -iS "kanye west" graduation album
+```
 
-hackspotify -iS kanye west graduation album
+---
 
+## 🏴‍☠️ Available Flags
 
-flags ive implemented so far are -tiduSo
+| Flag | Description |
+|------|-------------|
+| `-t` | Temporary (store files in `/tmp`, deleted regularly) |
+| `-i` | Immediately play (don’t wait for full download) |
+| `-d` | Download then play (default behavior) |
+| `-u` | Update / reinstall hackspotify |
+| `-S` | Shuffle playlist |
+| `-o` | Play in original order |
 
--t temporary, it saves your download music to your /tmp files which are deleted regularly, use this when you want to just listen to something without downloading it
+> 📝 **Autofill** only works when you’re in the project folder. Run:
+>
+> ```bash
+> cd ~/Music/hackspotify
+> ```
 
--i immediately play, without waiting for it to download
+To quickly see usage info:
 
--d download and then play, that's the default option
+```bash
+cat /usr/bin/hackspotify | head -n 25
+```
 
--u update, as in if you have problems or something didn't download right just run it and it will try the installation again
+---
 
--S shuffle, 
+## ⏭ Controls
 
--o original order as in the youtube playlist
+- **Next song:** `CTRL+C`
+- **Exit everything:** Double tap `CTRL+C`
 
-Ive also implemented the autofill option but it only works correctly if youre in its hackspotify folder
-so prefereably before every command run just do 
+---
 
-cd ~/Music/hackspotify
+## 📸 Screenshots
 
-then run command
+<p align="center">
+  <img src="https://your-image-url-1.png" width="600" alt="Terminal Output Screenshot"/>
+  <br/>
+  <img src="https://your-image-url-2.png" width="600" alt="Another Screenshot"/>
+</p>
 
-if you forget what everything does just run cat /usr/bin/hackspotify | head -n 25
+> Replace the links above with actual screenshots. Upload your images to GitHub, Imgur, or somewhere public and paste the URLs.
 
-next song command is simply ctrl+c 
-and exit everything double tap ctrl+c
+---
 
-ENJOY!!
-if you havent used it in a long while try updating it with 
+## 🛠 Updating
 
+If something isn’t working or you haven’t used it in a while:
+
+```bash
 hackspotify update
+```
+
+---
+
+## 🤘 Enjoy the Music
+
+This is a personal project, but feel free to **fork**, **star ⭐**, and play around with it.  
+Pull requests and suggestions are welcome!
+
+---
+
+## 📜 License
+
+MIT License – do whatever you want, just don’t sue me 😄
