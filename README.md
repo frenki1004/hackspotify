@@ -56,7 +56,7 @@ hackspotify [-flags] [ARTIST NAME] [ALBUM NAME] album
 ### 🔊 Example
 
 ```bash
-hackspotify -iS "kanye west" graduation album
+hackspotify -iS kanye west graduation album
 ```
 
 ---
@@ -68,7 +68,7 @@ hackspotify -iS "kanye west" graduation album
 | `-t` | Temporary (store files in `/tmp`, deleted regularly) |
 | `-i` | Immediately play (don’t wait for full download) |
 | `-d` | Download then play (default behavior) |
-| `-u` | Update / reinstall hackspotify |
+| `-u` | Update / reinstall the album|
 | `-S` | Shuffle playlist |
 | `-o` | Play in original order |
 
