@@ -96,9 +96,7 @@ cat /usr/bin/hackspotify | head -n 25
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://your-image-url-1.png" width="600" alt="Terminal Output Screenshot"/>
-  <br/>
-  <img src="https://your-image-url-2.png" width="600" alt="Another Screenshot"/>
+  <img src="assets/Screenshot from 2025-03-20 00-17-09.png" width="600" alt="Hackspotify Terminal Screenshot">
 </p>
 
 > Replace the links above with actual screenshots. Upload your images to GitHub, Imgur, or somewhere public and paste the URLs.
